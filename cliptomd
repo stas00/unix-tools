@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# rewrites rich text into markdown w/o leaving the clipboard!
+#
+# copy preformatted text from Slack, github, Google docs, etc. into markdown w/o losing the rich formatting
+#
+# 1. copy the formatted post on Slack or another online text w/ Ctrl-c (or whatever your OS uses)
+# 2. run this script in the console
+# 3. paste normally w/ Ctrl-v (or whatever your OS uses) anywhere and it'll be the markdown
+#
+# the only downside is that it uses a prefix to markdown code blocks instead of backticks
+#
+# if you're missing these programs install them with:
+#
+# apt install xclip python3-html2text
+#
+# you should be able to replace `html2markdown` w/ any other script that can convert from html to md
+#
+#
+# I haven't tested, but on Mac apparently the following is the equivalent of xclip
+#
+# pbpaste | html2markdown | pbcopy
+
+xclip -selection clipboard -o -t text/html | html2markdown | xclip -i -selection clipboard

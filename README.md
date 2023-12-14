@@ -7,3 +7,4 @@ Various useful utils around the system. Most were developed by me, unless stated
 - [makepdf](./makepdf) - convert a folder of scanned images into a pdf file
 - [rename.pl](./rename.pl) - rename dir/file names using perl regex as an argument - a very old but still extremely useful program written by Larry Wall in 1990! You definitely want to have this one in your `$PATH` directory.
 - [cmd-reformat.md](./cmd-reformat.md) - a one liner tool to compared 2 sets of cmd args and also to format/sort cmd args - same as a program: [cmd-reformat](./cmd-reformat).
+- [cliptomd](./cliptomd) - copy preformatted text from Slack, github, Google docs, etc. into markdown w/o losing the rich formatting
